@@ -1,0 +1,28 @@
+@gmf
+@namespace(uri="PizzaPrepTime", prefix="")
+package PizzaPrepTime;
+
+@gmf.node(label="Name")
+class Customer {
+	attr String Name;
+	attr long Cell_phone;
+}
+
+@gmf.diagram
+class Order {
+	attr String Name;
+	attr int no_of_pizzas;
+	val Customer[*] customers;
+	val Restaurant[*] restaurants;
+}
+
+class Restaurant {
+	attr String R_Name;
+	attr int ovens;
+	attr int oven_capacity;
+	attr int oven_time;
+	attr int doughmaking_time;
+	attr int addtoppings_time;
+	attr int prep_time;
+}
+
